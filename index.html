@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pomodoro </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Link ke Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Ikon Pengaturan -->
+    <div class="settings-icon" id="settingsIcon">
+        <i class="fas fa-cog"></i>
+    </div>
+    
+    <!-- Container Utama -->
+    <div class="container">
+        <!-- Pomodoro Timer -->
+        <div class="pomodoro">
+            <div id="timer" class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="controls">
+                <button id="reset">Atur Ulang</button>
+            </div>
+        </div>
+        
+        <!-- To-Do List -->
+        <div class="todo-list">
+            <h3>To-Do List</h3>
+            <input type="text" id="todoInput" placeholder="Tambahkan tugas baru...">
+            <button id="addTodo">Tambah</button>
+            <ul id="todoItems"></ul>
+        </div>
+    </div>
+    
+    <!-- Spotify Widget -->
+    <div class="spotify-widget">
+        <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/1xVQZjNBLeHGCLfT3Ngfrk?utm_source=generator" 
+            width="80%" 
+            height="80" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
+    </div>
+    
+    <!-- Modal Pengaturan -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <h2>Pengaturan</h2>
+            
+            <label for="pomodoroDuration">Waktu Belajar (menit):</label>
+            <input type="range" id="pomodoroDuration" min="1" max="60" value="25" step="1">
+            <span id="pomodoroValue">25 menit</span>
+            
+            <label for="breakDuration">Waktu Istirahat (menit):</label>
+            <input type="range" id="breakDuration" min="1" max="30" value="5" step="1">
+            <span id="breakValue">5 menit</span>
+        </div>
+    </div>
+    
+    <!-- Tambahkan Skrip -->
+    <script src="script.js"></script>
+</body>
+</html>
